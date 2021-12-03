@@ -1,31 +1,32 @@
 import random
 
+choose_level = input("What difficulty level? 1 - 4: ")
 
-def choose_numbers(x):
+def choose_numbers(difficulty_level):
     # Level 1: up to 10
-    if x == 1:
-        num1 = random.randint(1, 10)
+    if difficulty_level == 1:
+        num1 =random.randint(1, 10)
         num2 = random.randint(1, 10)
     # Level 2: up to 20
-    elif x == 2:
+    elif difficulty_level == 2:
         num1 = random.randint(1, 20)
         num2 = random.randint(1, 20)
     # Level 3: up to 50
-    elif x == 3:
+    elif difficulty_level == 3:
         num1 = random.randint(1, 50)
         num2 = random.randint(1, 50)
     # Level 4: up to 100
-    elif x == 4:
+    elif difficulty_level == 4:
         num1 = random.randint(1, 50)
         num2 = random.randint(1, 50)
     else:
-        pass
+        choose_numbers(int(choose_level))
     return num1, num2
 
 
-choose_level = input("What difficulty level? 1 - 4: ")
+nums = choose_numbers(int(choose_level))
 
-
+    
 # Add
 def math_add(nums):
     answer = nums[0] + nums[1]
