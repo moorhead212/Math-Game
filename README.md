@@ -1,2 +1,2 @@
 # Math Game
- This is my Math Game for Codecademy
+Math game weeee
